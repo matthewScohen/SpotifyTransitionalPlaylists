@@ -24,7 +24,6 @@
 // //   window.opener.spotifyCallback(token)
 // // }
 function implicitGrantFlow() {
-
 /* If access token has been assigned in the past and is not expired, no request required. */
 if (sessionStorage.getItem("accessToken") !== null &&
     sessionStorage.getItem("tokenTimeStamp") !== null &&
@@ -58,9 +57,8 @@ if (sessionStorage.getItem("accessToken") !== null &&
         console.log(this.url);
         $(location).attr('href', this.url);
     });
+  }
 }
-}
-
 function getAccessToken() {
 
     access_token = sessionStorage.getItem("accessToken");
