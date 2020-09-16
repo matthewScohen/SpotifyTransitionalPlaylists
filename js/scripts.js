@@ -42,7 +42,7 @@ if (sessionStorage.getItem("accessToken") !== null &&
         data: {
             client_id: "4f80521dc4c84c6eb92da6f9b5c06458",
             redirect_uri: "https://matthewscohen.github.io/SpotifyTransitionalPlaylists/",
-            response_type: response_type_token,
+            response_type: "code",
         }
     }).done(function callback(response) {
         /* Redirect user to home page */
