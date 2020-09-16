@@ -64,6 +64,6 @@ function getAccessToken()
   token = window.location.hash.substr(1).split('&')[0].split("=")[1]
   if (token)
   {
-    window.opener.spotifyCallback(token)
+    console.log(token)
   }
 }
