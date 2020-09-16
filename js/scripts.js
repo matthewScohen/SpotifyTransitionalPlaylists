@@ -59,6 +59,7 @@ if (sessionStorage.getItem("accessToken") !== null &&
         $(location).attr('href', this.url);
     });
 }
+}
 
 function getAccessToken() {
 
