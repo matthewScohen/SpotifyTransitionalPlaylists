@@ -42,7 +42,7 @@ if (sessionStorage.getItem("accessToken") !== null &&
         data: {
             client_id: "4f80521dc4c84c6eb92da6f9b5c06458",
             redirect_uri: "https://matthewscohen.github.io/SpotifyTransitionalPlaylists/",
-            response_type: "code",
+            response_type: "token",
         }
     }).done(function callback(response) {
         /* Redirect user to home page */
@@ -60,7 +60,6 @@ if (sessionStorage.getItem("accessToken") !== null &&
 function getAccessToken() {
 
     access_token = sessionStorage.getItem("accessToken");
-
     if (access_token === null) {
         if (window.location.hash) {
             console.log('Getting Access Token');
