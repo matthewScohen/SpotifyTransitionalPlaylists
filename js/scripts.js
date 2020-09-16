@@ -5,3 +5,10 @@ if(window.location.hash == "")
 // token = window.location.hash;
 token = window.location.hash.substr(1).split('&')[0].split("=")[1]
 console.log(token);
+
+var spotifyApi = new SpotifyWebApi();
+spotifyApi.setAccessToken(token);
+spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function (err, data) {
+  if (err) console.error(err);
+  else console.log('Artist albums', data);
+});
