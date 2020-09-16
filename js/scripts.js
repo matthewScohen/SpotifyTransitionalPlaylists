@@ -107,3 +107,4 @@ function getAccessToken() {
         var timeLeft = (tokenExpireSec - upTokenTime);
         console.log("Token still valid: " + Math.floor(timeLeft / 60) + " minutes left.");
     }
+  }
