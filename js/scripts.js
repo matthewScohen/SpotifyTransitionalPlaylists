@@ -19,7 +19,7 @@ window.spotifyCallback = (payload) => {
   })
 }
 
-token = window.location.hash.substr(1).split('&')[0].split("=")[1]
-if (token) {
-  window.opener.spotifyCallback(token)
-}
+// token = window.location.hash.substr(1).split('&')[0].split("=")[1]
+// if (token) {
+//   window.opener.spotifyCallback(token)
+// }
