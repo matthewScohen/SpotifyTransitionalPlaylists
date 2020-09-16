@@ -36,15 +36,13 @@ if (sessionStorage.getItem("accessToken") !== null &&
 } else {
     console.log("Token expired or never found, getting new token.");
     $.ajax({
-        url: auth_url,
+        url: "https://accounts.spotify.com/authorize?client_id=4f80521dc4c84c6eb92da6f9b5c06458&response_type=code&redirect_uri=https://matthewscohen.github.io/SpotifyTransitionalPlaylists/&scope=playlist-modify-public%20playlist-read-private%20playlist-modify-private&state=34fFs29kd09",
         type: 'GET',
         contentType: 'application/json',
         data: {
-            client_id: client_id,
-            redirect_uri: redirect_uri,
-            scope: scopes,
+            client_id: "4f80521dc4c84c6eb92da6f9b5c06458",
+            redirect_uri: "https://matthewscohen.github.io/SpotifyTransitionalPlaylists/",
             response_type: response_type_token,
-            state: state
         }
     }).done(function callback(response) {
         /* Redirect user to home page */
