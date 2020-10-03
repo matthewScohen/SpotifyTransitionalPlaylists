@@ -9,16 +9,9 @@ var spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
 
 //Get the users ID
-spotifyApi.getMe().then(
-  function(data) {
-    console.log(data.id);
-    var userId = data.id;
-  },
-  function (err) {
-    console.error(err);
-  }
-);
+let userId = await spotifyApi.getMe().id;
 console.log("User Id", userId);
+
 //Get the user's playlists
 spotifyApi.getUserPlaylists().then(
     function (data) {
