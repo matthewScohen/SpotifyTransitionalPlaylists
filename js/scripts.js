@@ -12,7 +12,8 @@ spotifyApi.setAccessToken(token);
 var userId = "";
 spotifyApi.getMe().then(
   function(data) {
-    userId = data.id;
+    console.log(data);
+    console.log(data.id);
   },
   function (err) {
     console.error(err);
