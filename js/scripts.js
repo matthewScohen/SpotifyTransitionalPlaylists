@@ -9,11 +9,10 @@ var spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
 
 //Get the users ID
-var userId = "";
 spotifyApi.getMe().then(
   function(data) {
-    console.log(data);
     console.log(data.id);
+    var userId = data.id;
   },
   function (err) {
     console.error(err);
