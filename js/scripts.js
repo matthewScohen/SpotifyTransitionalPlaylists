@@ -7,18 +7,22 @@ token = window.location.hash.substr(1).split('&')[0].split("=")[1]
 
 var spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
+
+//Get the users ID
+var userId = "";
 spotifyApi.getMe().then(
   function(data) {
-    console.log("getMe", data);
+    userId = data.id;
   },
   function (err) {
     console.error(err);
   }
 );
-
+console.log("User Id", userId);
+//Get the user's playlists
 spotifyApi.getUserPlaylists().then(
     function (data) {
-      console.log('User playlists', data.items[0]);
+      console.log('User playlist 1', data.items[0].name);
     },
     function (err) {
       console.error(err);
