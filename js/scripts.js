@@ -8,7 +8,11 @@ console.log(token);
 
 var spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
-spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function (err, data) {
-  if (err) console.error(err);
-  else console.log('Artist albums', data);
-});
+spotifyApi.getUserPlaylists().then(
+    function (data) {
+      console.log('User playlists', data);
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
