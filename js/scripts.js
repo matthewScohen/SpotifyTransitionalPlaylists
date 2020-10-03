@@ -4,13 +4,21 @@ if(window.location.hash == "")
 }
 // token = window.location.hash;
 token = window.location.hash.substr(1).split('&')[0].split("=")[1]
-console.log(token);
 
 var spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
+spotifyApi.getMe().then(
+  function(data) {
+    console.log("getMe", data);
+  },
+  function (err) {
+    console.error(err);
+  }
+);
+
 spotifyApi.getUserPlaylists().then(
     function (data) {
-      console.log('User playlists', data);
+      console.log('User playlists', data.items[0]);
     },
     function (err) {
       console.error(err);
