@@ -20,7 +20,7 @@ var userId = spotifyApi.getMe().then(
 //Get the user's playlists
 spotifyApi.getUserPlaylists().then(
     function (data) {
-      console.log('User playlist 1', data.items[0]);
+      console.log('User playlist 1', data.items[0].tracks);
       //call function to add the playlists to the UI here.
     },
     function (err) {
