@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SpotifyTrackFeatures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-DataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2" style="padding: 0;"><table id="dt-vertical-scroll" class="table" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm">Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Playlist Name</td>
+     </tr>
+  </tbody>
+</table></div>
+            <div class="col-10" style="padding: 0;"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-block" style="padding: 0;/*overflow: scroll;*//*position: absolute;*/min-width: 100%;max-width: 100%;"><table id="songTable" class="table table-striped table-bordered table-sm " cellspacing="0"
+  width="100%">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Duration</th>
+      <th>Time Signature</th>
+      <th>Key</th>
+      <th>Mode</th>
+      <th>Acousticness</th>
+      <th>Dancebility</th>
+      <th>Energy</th>
+      <th>Instrumentalness</th>
+        <th>Liveness</th>
+        <th>Loudness</th>
+        <th>Speechiness</th>
+        <th>Valence</th>
+        <th>Tempo (BPM)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Longer Still</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      <tr>
+      <td>Song Title Can Be Long</td>
+      <td>4:05</td>
+      <td>4/4</td>
+      <td>A</td>
+      <td>Major</td>
+      <td>0.21</td>
+      <td>0.54</td>
+      <td>0.86</td>
+        <td>0.83</td>
+        <td>0.23</td>
+        <td>0.46</td>
+        <td>0.37</td>
+        <td>0.45</td>
+      <td>80</td>
+    </tr>
+      
+  </tbody>
+</table></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/Bootstrap-DataTables.js"></script>
+</body>
+
+</html>
