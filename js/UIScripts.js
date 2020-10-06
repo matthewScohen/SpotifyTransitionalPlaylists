@@ -39,6 +39,5 @@ var exampleSongData = {
   tempo: 45
 };
 clearSongTable();
-addSongToTable(exampleSongData);
-addSongToTable(exampleSongData);
-addSongToTable(exampleSongData);
+for(var i = 0; i < 30; i++)
+  addSongToTable(exampleSongData);
