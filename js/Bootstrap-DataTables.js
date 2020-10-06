@@ -1,7 +1,7 @@
 
   var songTable = $('#songTable').DataTable({
   "scrollX": true,
-  "scrollY": "70vh",
+  "scrollY": "55vh",
   "searching": false,
   "info": false,
   "paging": false,
@@ -14,6 +14,6 @@ $(document).ready(function () {
     "searching": false,
     "info": false,
     "paging": false,
-    "scrollY": "11vh",
+    "scrollY": "25vh",
   });
 });
