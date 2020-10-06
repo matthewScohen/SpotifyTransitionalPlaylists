@@ -49,13 +49,13 @@ function getPlaylistSongInfo(playlistID)
   };
 }
 
+//Get info from the user's first playlist
+var firstPlaylistInfo;
 spotifyApi
   .getUserPlaylists()
   .then(function (data) {
     return data.items[0].id;
   })
   .then(function (playlistID) {
-    var info = getPlaylistSongInfo(playlistID);
-    console.log("Audio Features", info.audio_features);
-    console.log("Names", info.names);
+    firstPlaylistInfo = getPlaylistSongInfo(playlistID);
   });
