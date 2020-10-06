@@ -56,5 +56,6 @@ spotifyApi
   })
   .then(function (playlistID) {
     var info = getPlaylistSongInfo(playlistID);
-    console.log(info.audio_features);
+    console.log("Audio Features", info.audio_features);
+    console.log("Names", info.names);
   });
