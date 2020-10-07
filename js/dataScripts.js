@@ -38,7 +38,7 @@ function addPlaylistSongsToTable(playlistID, offset) //Can request a max of 100 
   .then(function (songInfoObject) {
     for(var i = 0; i < names.length; i++) {
       //Limit the max title length
-      var maxTitleCharacters = 25;
+      var maxTitleCharacters = 40;
       var title = names[i];
       if(title.length > 25)
         title = title.substring(0,25).concat("...");
