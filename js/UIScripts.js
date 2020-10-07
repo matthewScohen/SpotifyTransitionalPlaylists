@@ -38,24 +38,3 @@ var exampleSongData = {
   valence: 0.45,
   tempo: 45
 };
-clearSongTable();
-for(var i in firstPlaylistInfo.names)
-{
-  var songData = {
-    title: firstPlaylistInfo.names[i],
-    duration: firstPlaylistInfo.audio_features[i].duration_ms,
-    time_sig: firstPlaylistInfo.audio_features[i].time_signature,
-    key: firstPlaylistInfo.audio_features[i].key,
-    mode: firstPlaylistInfo.audio_features[i].mode,
-    acoust: firstPlaylistInfo.audio_features[i].acousticness,
-    dance: firstPlaylistInfo.audio_features[i].danceability,
-    energy: firstPlaylistInfo.audio_features[i].energy,
-    instru: firstPlaylistInfo.audio_features[i].instrumentalness,
-    liveness: firstPlaylistInfo.audio_features[i].liveness,
-    loudness: firstPlaylistInfo.audio_features[i].loudness,
-    speech: firstPlaylistInfo.audio_features[i].speechiness,
-    valence: firstPlaylistInfo.audio_features[i].valence,
-    tempo: firstPlaylistInfo.audio_features[i].tempo
-  }
-  addSongToTable(songData);
-}
