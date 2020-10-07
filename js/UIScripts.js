@@ -16,7 +16,6 @@ function addSongToTable(songData)
     songData.instru,
     songData.liveness,
     songData.loudness,
-    songData.speech,
     songData.valence,
     songData.tempo
   ] ).draw();
