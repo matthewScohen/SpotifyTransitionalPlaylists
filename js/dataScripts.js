@@ -18,11 +18,9 @@ var userId = spotifyApi.getMe().then(
   }
 );
 
-function getPlaylistSongInfo(playlistID)
+function updateTableWithPlaylist(playlistID)
 {
   var names = [];
-  var audio_features = [];
-
   spotifyApi.getPlaylistTracks(playlistID)
   .then(function (trackData) {
     var ids = [];
@@ -37,24 +35,37 @@ function getPlaylistSongInfo(playlistID)
     return spotifyApi.getAudioFeaturesForTracks(trackIds);
   })
   .then(function (songInfoObject) {
-    for(feature in songInfoObject.audio_features)
-      audio_features.push(songInfoObject.audio_features[feature]);
-    return {
-        names,
-        audio_features
+    for(var i = 0; i < names.length; i++) {
+      var songData = {
+        title: names[i],
+        duration: songInfoObject.audio_features[i].duration_ms,
+        time_sig: songInfoObject.audio_features[i].time_signature,
+        key: songInfoObject.audio_features[i].key,
+        mode: songInfoObject.audio_features[i].mode,
+        acoust: songInfoObject.audio_features[i].acousticness,
+        dance: songInfoObject.audio_features[i].danceability,
+        energy: songInfoObject.audio_features[i].energy,
+        instru: songInfoObject.audio_features[i].instrumentalness,
+        liveness: songInfoObject.audio_features[i].liveness,
+        loudness: songInfoObject.audio_features[i].loudness,
+        speech: songInfoObject.audio_features[i].speechiness,
+        valence: songInfoObject.audio_features[i].valence,
+        tempo: songInfoObject.audio_features[i].tempo
       };
+      addSongToTable(songData);
+    }
   })
   .catch(function (error) {
     console.error(error);
   });
 }
 
-//Get info from the user's first playlist
+//Update table with info from the user's first playlist
 spotifyApi
   .getUserPlaylists()
   .then(function (data) {
     return data.items[0].id;
   })
   .then(function (playlistID) {
-    console.log(getPlaylistSongInfo(playlistID));
+    updateTableWithPlaylist(playlistID);
   });
