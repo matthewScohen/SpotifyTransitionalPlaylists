@@ -60,7 +60,6 @@ spotifyApi
     firstPlaylistInfo = getPlaylistSongInfo(playlistID);
   });
 
-  clearSongTable();
   for(var i in firstPlaylistInfo.names)
   {
     var songData = {

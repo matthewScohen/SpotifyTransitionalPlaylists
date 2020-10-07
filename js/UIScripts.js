@@ -38,3 +38,4 @@ var exampleSongData = {
   valence: 0.45,
   tempo: 45
 };
+clearSongTable();
