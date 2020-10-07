@@ -77,6 +77,6 @@ spotifyApi
         tempo: firstPlaylistInfo.audio_features[i].tempo
       }
       addSongToTable(songData);
-  });
+    }
 
-}
+});
