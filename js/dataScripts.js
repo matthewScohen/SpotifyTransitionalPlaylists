@@ -36,10 +36,14 @@ function addPlaylistSongsToTable(playlistID, offset) //Can request a max of 100 
     return spotifyApi.getAudioFeaturesForTracks(trackIds);
   })
   .then(function (songInfoObject) {
-    console.log(names);
     for(var i = 0; i < names.length; i++) {
+      //Limit the max title length
+      var maxTitleCharacters = 25;
+      var title = names[i];
+      if(title.length > 25)
+        title = title.substring(0,25).concat("...");
       var songData = {
-        title: names[i],
+        title: title,
         duration: songInfoObject.audio_features[i].duration_ms,
         time_sig: songInfoObject.audio_features[i].time_signature,
         key: songInfoObject.audio_features[i].key,

@@ -5,6 +5,9 @@
   "searching": false,
   "info": false,
   "paging": false,
+  "columnDefs": [
+    { "width": "20%", "targets": 0 }
+  ],
   });
 
   $('.dataTables_length').addClass('bs-select');
