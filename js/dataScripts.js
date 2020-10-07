@@ -18,12 +18,13 @@ var userId = spotifyApi.getMe().then(
   }
 );
 
-function updateTableWithPlaylist(playlistID)
+function addPlaylistSongsToTable(playlistID, offset) //Can request a max of 100 songs at a time
 {
   var names = [];
   spotifyApi.getPlaylistTracks(playlistID)
   .then(function (trackData) {
     var ids = [];
+    console.log(trackData.items);
     for(track in trackData.items)
     {
       ids.push(trackData.items[track].track.id);
@@ -35,6 +36,7 @@ function updateTableWithPlaylist(playlistID)
     return spotifyApi.getAudioFeaturesForTracks(trackIds);
   })
   .then(function (songInfoObject) {
+    console.log(names);
     for(var i = 0; i < names.length; i++) {
       var songData = {
         title: names[i],
@@ -48,7 +50,6 @@ function updateTableWithPlaylist(playlistID)
         instru: songInfoObject.audio_features[i].instrumentalness,
         liveness: songInfoObject.audio_features[i].liveness,
         loudness: songInfoObject.audio_features[i].loudness,
-        speech: songInfoObject.audio_features[i].speechiness,
         valence: songInfoObject.audio_features[i].valence,
         tempo: songInfoObject.audio_features[i].tempo
       };
@@ -64,8 +65,9 @@ function updateTableWithPlaylist(playlistID)
 spotifyApi
   .getUserPlaylists()
   .then(function (data) {
-    return data.items[0].id;
+    console.log(data.items[1]);
+    return data.items[1].id;
   })
   .then(function (playlistID) {
-    updateTableWithPlaylist(playlistID);
+    addPlaylistSongsToTable(playlistID);
   });
